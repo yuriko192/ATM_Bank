@@ -82,11 +82,17 @@
     <Compile Include="00_DaftarA.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="00_Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="00_Login.Designer.vb">
+      <DependentUpon>00_Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirm.designer.vb">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -109,8 +115,11 @@
     <EmbeddedResource Include="00_DaftarA.resx">
       <DependentUpon>00_DaftarA.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="00_Login.resx">
+      <DependentUpon>00_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirm.resx">
+      <DependentUpon>confirm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
