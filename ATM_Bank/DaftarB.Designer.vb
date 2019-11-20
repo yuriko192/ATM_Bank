@@ -25,16 +25,17 @@ Partial Class DaftarB
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.UnameBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.PinBox = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.PinBox2 = New System.Windows.Forms.TextBox()
+        Me.BalBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout
         Me.GroupBox1.SuspendLayout
         Me.SuspendLayout
@@ -46,20 +47,21 @@ Partial Class DaftarB
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(83, 31)
         Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Cancel"
+        Me.Button1.Text = "Back"
         Me.Button1.UseVisualStyleBackColor = true
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.UnameBox)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.PinBox)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
+        Me.GroupBox2.Controls.Add(Me.PinBox2)
+        Me.GroupBox2.Controls.Add(Me.BalBox)
         Me.GroupBox2.Font = New System.Drawing.Font("MS Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 79)
         Me.GroupBox2.Name = "GroupBox2"
@@ -77,68 +79,68 @@ Partial Class DaftarB
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Please Enter Your Username"
         '
-        'TextBox1
+        'UnameBox
         '
-        Me.TextBox1.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(10, 38)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(307, 23)
-        Me.TextBox1.TabIndex = 0
+        Me.UnameBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.UnameBox.Location = New System.Drawing.Point(10, 37)
+        Me.UnameBox.Name = "UnameBox"
+        Me.UnameBox.Size = New System.Drawing.Size(307, 23)
+        Me.UnameBox.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = true
         Me.Label2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Label2.Location = New System.Drawing.Point(7, 75)
+        Me.Label2.Location = New System.Drawing.Point(7, 73)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(152, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Please Enter PIN"
         '
-        'TextBox2
+        'PinBox
         '
-        Me.TextBox2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(10, 172)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(307, 23)
-        Me.TextBox2.TabIndex = 15
+        Me.PinBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.PinBox.Location = New System.Drawing.Point(10, 167)
+        Me.PinBox.Name = "PinBox"
+        Me.PinBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.PinBox.Size = New System.Drawing.Size(307, 23)
+        Me.PinBox.TabIndex = 15
         '
         'Label7
         '
         Me.Label7.AutoSize = true
         Me.Label7.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Label7.Location = New System.Drawing.Point(5, 229)
+        Me.Label7.Location = New System.Drawing.Point(6, 203)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(98, 16)
+        Me.Label7.Size = New System.Drawing.Size(143, 16)
         Me.Label7.TabIndex = 8
-        Me.Label7.Text = "Saldo Awal"
+        Me.Label7.Text = "Initial Balance"
         '
         'Label3
         '
         Me.Label3.AutoSize = true
         Me.Label3.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 142)
+        Me.Label3.Location = New System.Drawing.Point(7, 138)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(179, 16)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Please Re-enter PIN"
         '
-        'TextBox4
+        'PinBox2
         '
-        Me.TextBox4.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(10, 105)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(307, 23)
-        Me.TextBox4.TabIndex = 9
+        Me.PinBox2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.PinBox2.Location = New System.Drawing.Point(10, 102)
+        Me.PinBox2.Name = "PinBox2"
+        Me.PinBox2.Size = New System.Drawing.Size(307, 23)
+        Me.PinBox2.TabIndex = 9
         '
-        'TextBox7
+        'BalBox
         '
-        Me.TextBox7.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(109, 226)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(208, 23)
-        Me.TextBox7.TabIndex = 13
+        Me.BalBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.BalBox.Location = New System.Drawing.Point(70, 231)
+        Me.BalBox.Name = "BalBox"
+        Me.BalBox.Size = New System.Drawing.Size(255, 23)
+        Me.BalBox.TabIndex = 13
         '
         'GroupBox1
         '
@@ -163,24 +165,35 @@ Partial Class DaftarB
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button2.Location = New System.Drawing.Point(260, 350)
+        Me.Button2.Location = New System.Drawing.Point(244, 350)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(83, 31)
+        Me.Button2.Size = New System.Drawing.Size(99, 31)
         Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Next"
+        Me.Button2.Text = "Register"
         Me.Button2.UseVisualStyleBackColor = true
         '
-        'Daftar01
+        'Label5
+        '
+        Me.Label5.AutoSize = true
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("MS Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label5.Location = New System.Drawing.Point(18, 230)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(46, 21)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Rp."
+        '
+        'DaftarB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
-        Me.ClientSize = New System.Drawing.Size(352, 410)
+        Me.ClientSize = New System.Drawing.Size(352, 389)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
-        Me.Name = "Daftar01"
+        Me.Name = "DaftarB"
         Me.Text = "Form2"
         Me.GroupBox2.ResumeLayout(false)
         Me.GroupBox2.PerformLayout
@@ -193,14 +206,15 @@ End Sub
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents UnameBox As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents PinBox As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents PinBox2 As TextBox
+    Friend WithEvents BalBox As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label5 As Label
 End Class

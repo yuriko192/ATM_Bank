@@ -101,6 +101,7 @@
     <Compile Include="DaftarB.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalVar.vb" />
     <Compile Include="MainMenu.Designer.vb">
       <DependentUpon>MainMenu.vb</DependentUpon>
     </Compile>
@@ -165,6 +166,7 @@
     <Content Include=".TugasUas\.TugasUas.txt" />
     <Content Include=".TugasUas\Bunga.png" />
     <Content Include="logo.ico" />
+    <Content Include="QUERY.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Daftar_A
+Partial Class DaftarA
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,12 +22,12 @@ Partial Class Daftar_A
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Daftar_A))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DaftarA))
+        Me.NameBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.AddrBox = New System.Windows.Forms.TextBox()
+        Me.JobBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -38,13 +38,13 @@ Partial Class Daftar_A
         Me.GroupBox2.SuspendLayout
         Me.SuspendLayout
         '
-        'TextBox1
+        'NameBox
         '
-        Me.TextBox1.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(10, 38)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(307, 23)
-        Me.TextBox1.TabIndex = 0
+        Me.NameBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.NameBox.Location = New System.Drawing.Point(10, 38)
+        Me.NameBox.Name = "NameBox"
+        Me.NameBox.Size = New System.Drawing.Size(307, 23)
+        Me.NameBox.TabIndex = 0
         '
         'Label1
         '
@@ -66,22 +66,22 @@ Partial Class Daftar_A
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Please Enter Your Address"
         '
-        'TextBox4
+        'AddrBox
         '
-        Me.TextBox4.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(10, 105)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(307, 23)
-        Me.TextBox4.TabIndex = 9
+        Me.AddrBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AddrBox.Location = New System.Drawing.Point(10, 105)
+        Me.AddrBox.Name = "AddrBox"
+        Me.AddrBox.Size = New System.Drawing.Size(307, 23)
+        Me.AddrBox.TabIndex = 9
         '
-        'TextBox2
+        'JobBox
         '
-        Me.TextBox2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(10, 172)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(307, 23)
-        Me.TextBox2.TabIndex = 15
+        Me.JobBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.JobBox.Location = New System.Drawing.Point(10, 172)
+        Me.JobBox.Name = "JobBox"
+        Me.JobBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.JobBox.Size = New System.Drawing.Size(307, 23)
+        Me.JobBox.TabIndex = 15
         '
         'Label3
         '
@@ -96,7 +96,7 @@ Partial Class Daftar_A
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button2.Location = New System.Drawing.Point(263, 312)
+        Me.Button2.Location = New System.Drawing.Point(264, 313)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(83, 31)
         Me.Button2.TabIndex = 16
@@ -127,11 +127,11 @@ Partial Class Daftar_A
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.NameBox)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.JobBox)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.AddrBox)
         Me.GroupBox2.Font = New System.Drawing.Font("MS Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(15, 79)
         Me.GroupBox2.Name = "GroupBox2"
@@ -149,7 +149,7 @@ Partial Class Daftar_A
         Me.Button1.Text = "Cancel"
         Me.Button1.UseVisualStyleBackColor = true
         '
-        'Daftar_A
+        'DaftarA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -160,7 +160,7 @@ Partial Class Daftar_A
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
-        Me.Name = "Daftar_A"
+        Me.Name = "DaftarA"
         Me.Text = "Account Registration"
         Me.GroupBox1.ResumeLayout(false)
         Me.GroupBox1.PerformLayout
@@ -170,11 +170,11 @@ Partial Class Daftar_A
 
 End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents NameBox As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents AddrBox As TextBox
+    Friend WithEvents JobBox As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox1 As GroupBox
