@@ -16,6 +16,7 @@
         Name = NameBox.Text
         Address = AddrBox.Text
         Job = JobBox.Text
+
         Dim x As New DaftarB(Me)
         x.Show()
         Me.Hide()
