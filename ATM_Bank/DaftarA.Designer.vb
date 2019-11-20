@@ -26,9 +26,7 @@ Partial Class Daftar_A
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -64,19 +62,9 @@ Partial Class Daftar_A
         Me.Label2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label2.Location = New System.Drawing.Point(7, 75)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(152, 16)
+        Me.Label2.Size = New System.Drawing.Size(233, 16)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Please Enter PIN"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = true
-        Me.Label7.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Label7.Location = New System.Drawing.Point(5, 229)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(98, 16)
-        Me.Label7.TabIndex = 8
-        Me.Label7.Text = "Saldo Awal"
+        Me.Label2.Text = "Please Enter Your Address"
         '
         'TextBox4
         '
@@ -85,14 +73,6 @@ Partial Class Daftar_A
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(307, 23)
         Me.TextBox4.TabIndex = 9
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(109, 226)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(208, 23)
-        Me.TextBox7.TabIndex = 13
         '
         'TextBox2
         '
@@ -109,14 +89,14 @@ Partial Class Daftar_A
         Me.Label3.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label3.Location = New System.Drawing.Point(7, 142)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(179, 16)
+        Me.Label3.Size = New System.Drawing.Size(197, 16)
         Me.Label3.TabIndex = 14
-        Me.Label3.Text = "Please Re-enter PIN"
+        Me.Label3.Text = "Please Enter Your Job"
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button2.Location = New System.Drawing.Point(263, 350)
+        Me.Button2.Location = New System.Drawing.Point(263, 312)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(83, 31)
         Me.Button2.TabIndex = 16
@@ -150,21 +130,19 @@ Partial Class Daftar_A
         Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
         Me.GroupBox2.Font = New System.Drawing.Font("MS Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(15, 79)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(331, 265)
+        Me.GroupBox2.Size = New System.Drawing.Size(331, 218)
         Me.GroupBox2.TabIndex = 18
         Me.GroupBox2.TabStop = false
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button1.Location = New System.Drawing.Point(15, 350)
+        Me.Button1.Location = New System.Drawing.Point(15, 312)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(83, 31)
         Me.Button1.TabIndex = 19
@@ -176,7 +154,7 @@ Partial Class Daftar_A
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
-        Me.ClientSize = New System.Drawing.Size(356, 389)
+        Me.ClientSize = New System.Drawing.Size(356, 353)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -195,9 +173,7 @@ End Sub
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button

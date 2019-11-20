@@ -76,10 +76,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="00_DaftarA.Designer.vb">
-      <DependentUpon>00_DaftarA.vb</DependentUpon>
+    <Compile Include="DaftarA.Designer.vb">
+      <DependentUpon>DaftarA.vb</DependentUpon>
     </Compile>
-    <Compile Include="00_DaftarA.vb">
+    <Compile Include="DaftarA.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="00_Login.vb">
@@ -93,6 +93,18 @@
       <DependentUpon>confirm.vb</DependentUpon>
     </Compile>
     <Compile Include="confirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaftarB.Designer.vb">
+      <DependentUpon>DaftarB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -112,14 +124,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="00_DaftarA.resx">
-      <DependentUpon>00_DaftarA.vb</DependentUpon>
+    <EmbeddedResource Include="DaftarB.resx">
+      <DependentUpon>DaftarB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaftarA.resx">
+      <DependentUpon>DaftarA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="00_Login.resx">
       <DependentUpon>00_Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="confirm.resx">
       <DependentUpon>confirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
