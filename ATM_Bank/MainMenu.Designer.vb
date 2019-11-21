@@ -36,67 +36,67 @@ Partial Class MainMenu
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox8.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.SuspendLayout()
+        Me.GroupBox1.SuspendLayout
+        Me.GroupBox8.SuspendLayout
+        Me.GroupBox7.SuspendLayout
+        Me.GroupBox2.SuspendLayout
+        Me.GroupBox6.SuspendLayout
+        Me.GroupBox5.SuspendLayout
+        Me.GroupBox4.SuspendLayout
+        Me.GroupBox3.SuspendLayout
+        Me.SuspendLayout
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button1.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
         Me.Button1.Location = New System.Drawing.Point(27, 19)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(94, 37)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Cek Saldo"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button2.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
         Me.Button2.Location = New System.Drawing.Point(27, 19)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(94, 37)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Riwayat Transaksi"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = true
         '
         'Button3
         '
-        Me.Button3.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button3.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
         Me.Button3.Location = New System.Drawing.Point(33, 19)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(94, 37)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Tabung"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = true
         '
         'Button4
         '
         Me.Button4.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button4.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button4.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
         Me.Button4.Location = New System.Drawing.Point(42, 19)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(74, 37)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Tarik Uang"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = true
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(128,Byte),Integer))
         Me.GroupBox1.Controls.Add(Me.GroupBox8)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(21, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(363, 100)
         Me.GroupBox1.TabIndex = 5
-        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.TabStop = false
         '
         'GroupBox8
         '
@@ -106,7 +106,7 @@ Partial Class MainMenu
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(118, 56)
         Me.GroupBox8.TabIndex = 9
-        Me.GroupBox8.TabStop = False
+        Me.GroupBox8.TabStop = false
         '
         'GroupBox7
         '
@@ -116,22 +116,22 @@ Partial Class MainMenu
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(94, 37)
         Me.GroupBox7.TabIndex = 7
-        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.TabStop = false
         '
         'Button5
         '
-        Me.Button5.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button5.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
         Me.Button5.Location = New System.Drawing.Point(9, 8)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Log-out"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.UseVisualStyleBackColor = true
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("MS Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label1.AutoSize = true
+        Me.Label1.Font = New System.Drawing.Font("MS Gothic", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
         Me.Label1.Location = New System.Drawing.Point(13, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(205, 24)
@@ -149,7 +149,7 @@ Partial Class MainMenu
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(363, 212)
         Me.GroupBox2.TabIndex = 6
-        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.TabStop = false
         '
         'GroupBox6
         '
@@ -159,7 +159,7 @@ Partial Class MainMenu
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(154, 75)
         Me.GroupBox6.TabIndex = 8
-        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.TabStop = false
         '
         'GroupBox5
         '
@@ -169,7 +169,7 @@ Partial Class MainMenu
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(154, 75)
         Me.GroupBox5.TabIndex = 7
-        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.TabStop = false
         '
         'GroupBox4
         '
@@ -179,7 +179,7 @@ Partial Class MainMenu
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(154, 75)
         Me.GroupBox4.TabIndex = 6
-        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.TabStop = false
         '
         'GroupBox3
         '
@@ -189,11 +189,11 @@ Partial Class MainMenu
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(154, 75)
         Me.GroupBox3.TabIndex = 5
-        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.TabStop = false
         '
         'MainMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.ClientSize = New System.Drawing.Size(401, 360)
@@ -201,18 +201,18 @@ Partial Class MainMenu
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "MainMenu"
         Me.Text = "MainMenu"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox8.ResumeLayout(False)
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        Me.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(false)
+        Me.GroupBox1.PerformLayout
+        Me.GroupBox8.ResumeLayout(false)
+        Me.GroupBox7.ResumeLayout(false)
+        Me.GroupBox2.ResumeLayout(false)
+        Me.GroupBox6.ResumeLayout(false)
+        Me.GroupBox5.ResumeLayout(false)
+        Me.GroupBox4.ResumeLayout(false)
+        Me.GroupBox3.ResumeLayout(false)
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
