@@ -48,30 +48,30 @@ Partial Class MainMenu
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Button1.Location = New System.Drawing.Point(27, 19)
+        Me.Button1.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.Button1.Location = New System.Drawing.Point(6, 9)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 37)
+        Me.Button1.Size = New System.Drawing.Size(142, 60)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Cek Saldo"
         Me.Button1.UseVisualStyleBackColor = true
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Button2.Location = New System.Drawing.Point(27, 19)
+        Me.Button2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.Button2.Location = New System.Drawing.Point(6, 10)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 37)
+        Me.Button2.Size = New System.Drawing.Size(142, 59)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Riwayat Transaksi"
         Me.Button2.UseVisualStyleBackColor = true
         '
         'Button3
         '
-        Me.Button3.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Button3.Location = New System.Drawing.Point(33, 19)
+        Me.Button3.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.Button3.Location = New System.Drawing.Point(6, 9)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(94, 37)
+        Me.Button3.Size = New System.Drawing.Size(142, 60)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Tabung"
         Me.Button3.UseVisualStyleBackColor = true
@@ -79,10 +79,10 @@ Partial Class MainMenu
         'Button4
         '
         Me.Button4.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button4.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Button4.Location = New System.Drawing.Point(42, 19)
+        Me.Button4.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.Button4.Location = New System.Drawing.Point(6, 10)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(74, 37)
+        Me.Button4.Size = New System.Drawing.Size(142, 59)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Tarik Uang"
         Me.Button4.UseVisualStyleBackColor = true
@@ -121,9 +121,9 @@ Partial Class MainMenu
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Button5.Location = New System.Drawing.Point(9, 8)
+        Me.Button5.Location = New System.Drawing.Point(4, 3)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(88, 30)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Log-out"
         Me.Button5.UseVisualStyleBackColor = true
