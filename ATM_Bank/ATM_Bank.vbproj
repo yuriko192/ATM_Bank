@@ -129,6 +129,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserTable.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserTable.vb">
+      <DependentUpon>UserTable.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DaftarB.resx">
