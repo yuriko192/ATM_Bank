@@ -130,6 +130,12 @@
     <Compile Include="NominalUang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TarikUang.Designer.vb">
+      <DependentUpon>TarikUang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TarikUang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserTable.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NominalUang.resx">
       <DependentUpon>NominalUang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarikUang.resx">
+      <DependentUpon>TarikUang.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
