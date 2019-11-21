@@ -11,3 +11,14 @@ Syarat fitur yang harus ada:
 4.	User dapat melihat saldo mereka dan melihat log transaksi mereka selama 30 hari terakhir.
 5.	Saran field tabel user: ID User, Username, Alamat, Pekerjaan.
 6.	Saran field tabel transaksi: ID Transaksi, ID User, Tanggal, Tipe Transaksi, Jumlah Transaksi, Saldo. Tipe transaksi berupa debet/kredit.
+
+bikin tabel transaksi
+bikin form cek saldo
+bikin form narik uang dan nabung
+bikin form riwayat transaksi
+masukin code bwt form:
+	saldo
+	narik uang
+	nabung
+	riwayat transaksi
+	main menu
