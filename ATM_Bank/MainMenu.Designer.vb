@@ -26,6 +26,7 @@ Partial Class MainMenu
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout
         '
         'Button1
@@ -64,11 +65,21 @@ Partial Class MainMenu
         Me.Button4.Text = "Tarik Uang"
         Me.Button4.UseVisualStyleBackColor = true
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(315, 12)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 4
+        Me.Button5.Text = "Logout"
+        Me.Button5.UseVisualStyleBackColor = true
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(402, 230)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -83,4 +94,5 @@ End Sub
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class

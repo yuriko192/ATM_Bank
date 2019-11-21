@@ -17,9 +17,11 @@ Public Class DaftarB
     End Sub
 
     Private Sub DaftarB_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If (source.IsAccessible) Then
+        Try
             source.Show()
-        End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

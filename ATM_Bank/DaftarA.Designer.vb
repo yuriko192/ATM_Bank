@@ -79,7 +79,6 @@ Partial Class DaftarA
         Me.JobBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.JobBox.Location = New System.Drawing.Point(10, 172)
         Me.JobBox.Name = "JobBox"
-        Me.JobBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.JobBox.Size = New System.Drawing.Size(307, 23)
         Me.JobBox.TabIndex = 15
         '

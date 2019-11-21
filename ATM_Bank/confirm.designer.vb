@@ -27,7 +27,7 @@ Partial Class confirm
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.PinBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout
@@ -59,7 +59,7 @@ Partial Class confirm
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.PinBox)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 118)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(327, 172)
@@ -87,13 +87,13 @@ Partial Class confirm
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "    In order to proceed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Please enter your pin below"
         '
-        'TextBox1
+        'PinBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(47, 115)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox1.Size = New System.Drawing.Size(221, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.PinBox.Location = New System.Drawing.Point(47, 115)
+        Me.PinBox.Name = "PinBox"
+        Me.PinBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.PinBox.Size = New System.Drawing.Size(221, 20)
+        Me.PinBox.TabIndex = 1
         '
         'Button1
         '
@@ -140,7 +140,7 @@ End Sub
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents PinBox As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
