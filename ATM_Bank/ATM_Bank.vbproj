@@ -124,6 +124,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Nabung.Designer.vb">
+      <DependentUpon>Nabung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nabung.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NominalUang.Designer.vb">
       <DependentUpon>NominalUang.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nabung.resx">
+      <DependentUpon>Nabung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NominalUang.resx">
       <DependentUpon>NominalUang.vb</DependentUpon>
