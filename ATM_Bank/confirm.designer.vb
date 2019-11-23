@@ -49,11 +49,11 @@ Partial Class confirm
         '
         Me.Label1.AutoSize = true
         Me.Label1.Font = New System.Drawing.Font("MS Gothic", 24!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Label1.Location = New System.Drawing.Point(20, 34)
+        Me.Label1.Location = New System.Drawing.Point(3, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(287, 33)
+        Me.Label1.Size = New System.Drawing.Size(321, 33)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "= Confirmation ="
+        Me.Label1.Text = "== Confirmation =="
         '
         'GroupBox2
         '
@@ -64,35 +64,35 @@ Partial Class confirm
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(327, 172)
         Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = false
+        Me.GroupBox2.TabStop = False
         '
         'GroupBox3
         '
-        Me.GroupBox3.BackColor = System.Drawing.Color.White
+        Me.GroupBox3.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Location = New System.Drawing.Point(26, 32)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(264, 62)
         Me.GroupBox3.TabIndex = 2
-        Me.GroupBox3.TabStop = false
+        Me.GroupBox3.TabStop = False
         '
         'Label2
         '
-        Me.Label2.AutoSize = true
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label2.Font = New System.Drawing.Font("MS Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label2.Location = New System.Drawing.Point(7, 16)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(251, 32)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "    In order to proceed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Please enter your pin below"
+        Me.Label2.Text = "    In order to proceed" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Please enter your pin below"
         '
         'PinBox
         '
-        Me.PinBox.Location = New System.Drawing.Point(47, 115)
+        Me.PinBox.Location = New System.Drawing.Point(26, 115)
         Me.PinBox.Name = "PinBox"
         Me.PinBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PinBox.Size = New System.Drawing.Size(221, 20)
+        Me.PinBox.Size = New System.Drawing.Size(264, 20)
         Me.PinBox.TabIndex = 1
         '
         'Button1

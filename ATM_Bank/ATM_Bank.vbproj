@@ -77,6 +77,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CekSaldo.Designer.vb">
+      <DependentUpon>CekSaldo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CekSaldo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirm.Designer.vb">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DaftarA.Designer.vb">
       <DependentUpon>DaftarA.vb</DependentUpon>
     </Compile>
@@ -90,12 +102,6 @@
       <DependentUpon>00_Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="confirm.designer.vb">
-      <DependentUpon>confirm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="confirm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DaftarB.Designer.vb">
       <DependentUpon>DaftarB.vb</DependentUpon>
     </Compile>
@@ -103,6 +109,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GlobalVar.vb" />
+    <Compile Include="HistoList.Designer.vb">
+      <DependentUpon>HistoList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HistoList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainMenu.Designer.vb">
       <DependentUpon>MainMenu.vb</DependentUpon>
     </Compile>
@@ -142,6 +154,12 @@
     <Compile Include="TarikUang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HistoryTransaksi.Designer.vb">
+      <DependentUpon>HistoryTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserTable.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,6 +170,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CekSaldo.resx">
+      <DependentUpon>CekSaldo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirm.resx">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DaftarB.resx">
       <DependentUpon>DaftarB.vb</DependentUpon>
     </EmbeddedResource>
@@ -161,8 +185,8 @@
     <EmbeddedResource Include="00_Login.resx">
       <DependentUpon>00_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="confirm.resx">
-      <DependentUpon>confirm.vb</DependentUpon>
+    <EmbeddedResource Include="HistoList.resx">
+      <DependentUpon>HistoList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>
@@ -181,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TarikUang.resx">
       <DependentUpon>TarikUang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryTransaksi.resx">
+      <DependentUpon>HistoryTransaksi.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
