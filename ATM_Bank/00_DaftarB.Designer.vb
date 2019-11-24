@@ -24,6 +24,7 @@ Partial Class DaftarB
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.UnameBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -35,7 +36,6 @@ Partial Class DaftarB
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout
         Me.GroupBox1.SuspendLayout
         Me.SuspendLayout
@@ -68,6 +68,17 @@ Partial Class DaftarB
         Me.GroupBox2.Size = New System.Drawing.Size(331, 265)
         Me.GroupBox2.TabIndex = 22
         Me.GroupBox2.TabStop = false
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = true
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("MS Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label5.Location = New System.Drawing.Point(18, 230)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(46, 21)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Rp."
         '
         'Label1
         '
@@ -172,17 +183,6 @@ Partial Class DaftarB
         Me.Button2.Text = "Register"
         Me.Button2.UseVisualStyleBackColor = true
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = true
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("MS Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Label5.Location = New System.Drawing.Point(18, 230)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 21)
-        Me.Label5.TabIndex = 16
-        Me.Label5.Text = "Rp."
-        '
         'DaftarB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -194,7 +194,7 @@ Partial Class DaftarB
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Name = "DaftarB"
-        Me.Text = "Form2"
+        Me.Text = "Daftar"
         Me.GroupBox2.ResumeLayout(false)
         Me.GroupBox2.PerformLayout
         Me.GroupBox1.ResumeLayout(false)

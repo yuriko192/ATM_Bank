@@ -335,6 +335,10 @@ Partial Public Class UserTable
         
         Private columnBALANCE As Global.System.Data.DataColumn
         
+        Private columnRATA As Global.System.Data.DataColumn
+        
+        Private columnLAST As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -419,6 +423,22 @@ Partial Public Class UserTable
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property RATAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnRATA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LASTColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLAST
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -455,9 +475,9 @@ Partial Public Class UserTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddUSER_ACCRow(ByVal USERNAME As String, ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer) As USER_ACCRow
+        Public Overloads Function AddUSER_ACCRow(ByVal USERNAME As String, ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer, ByVal RATA As Integer, ByVal LAST As Date) As USER_ACCRow
             Dim rowUSER_ACCRow As USER_ACCRow = CType(Me.NewRow,USER_ACCRow)
-            Dim columnValuesArray() As Object = New Object() {USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE}
+            Dim columnValuesArray() As Object = New Object() {USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE, RATA, LAST}
             rowUSER_ACCRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowUSER_ACCRow)
             Return rowUSER_ACCRow
@@ -492,6 +512,8 @@ Partial Public Class UserTable
             Me.columnJOB = MyBase.Columns("JOB")
             Me.columnPIN = MyBase.Columns("PIN")
             Me.columnBALANCE = MyBase.Columns("BALANCE")
+            Me.columnRATA = MyBase.Columns("RATA")
+            Me.columnLAST = MyBase.Columns("LAST")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -509,6 +531,10 @@ Partial Public Class UserTable
             MyBase.Columns.Add(Me.columnPIN)
             Me.columnBALANCE = New Global.System.Data.DataColumn("BALANCE", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnBALANCE)
+            Me.columnRATA = New Global.System.Data.DataColumn("RATA", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRATA)
+            Me.columnLAST = New Global.System.Data.DataColumn("LAST", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLAST)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnUSERNAME}, true))
             Me.columnUSERNAME.AllowDBNull = false
             Me.columnUSERNAME.Unique = true
@@ -1058,6 +1084,60 @@ Partial Public Class UserTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property RATA() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableUSER_ACC.RATAColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'RATA' in table 'USER_ACC' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableUSER_ACC.RATAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property LAST() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableUSER_ACC.LASTColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'LAST' in table 'USER_ACC' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableUSER_ACC.LASTColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsRATANull() As Boolean
+            Return Me.IsNull(Me.tableUSER_ACC.RATAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetRATANull()
+            Me(Me.tableUSER_ACC.RATAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLASTNull() As Boolean
+            Return Me.IsNull(Me.tableUSER_ACC.LASTColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLASTNull()
+            Me(Me.tableUSER_ACC.LASTColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function GetTRANSACTION_HISTRows() As TRANSACTION_HISTRow()
             If (Me.Table.ChildRelations("FK__TRANSACTI__USERN__74AE54BC") Is Nothing) Then
                 Return New TRANSACTION_HISTRow(-1) {}
@@ -1357,12 +1437,16 @@ Namespace UserTableTableAdapters
             tableMapping.ColumnMappings.Add("JOB", "JOB")
             tableMapping.ColumnMappings.Add("PIN", "PIN")
             tableMapping.ColumnMappings.Add("BALANCE", "BALANCE")
+            tableMapping.ColumnMappings.Add("RATA", "RATA")
+            tableMapping.ColumnMappings.Add("LAST", "LAST")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[USER_ACC] WHERE (([USERNAME] = @Original_USERNAME) AND ([NAME]"& _ 
                 " = @Original_NAME) AND ([ADDRESS] = @Original_ADDRESS) AND ([JOB] = @Original_JO"& _ 
-                "B) AND ([PIN] = @Original_PIN) AND ([BALANCE] = @Original_BALANCE))"
+                "B) AND ([PIN] = @Original_PIN) AND ([BALANCE] = @Original_BALANCE) AND ((@IsNull"& _ 
+                "_RATA = 1 AND [RATA] IS NULL) OR ([RATA] = @Original_RATA)) AND ((@IsNull_LAST ="& _ 
+                " 1 AND [LAST] IS NULL) OR ([LAST] = @Original_LAST)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_USERNAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_NAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NAME", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -1370,11 +1454,16 @@ Namespace UserTableTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_JOB", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "JOB", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PIN", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BALANCE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BALANCE", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_RATA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RATA", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RATA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RATA", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_LAST", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LAST", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_LAST", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LAST", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[USER_ACC] ([USERNAME], [NAME], [ADDRESS], [JOB], [PIN], [BALAN"& _ 
-                "CE]) VALUES (@USERNAME, @NAME, @ADDRESS, @JOB, @PIN, @BALANCE);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT USERNAME"& _ 
-                ", NAME, ADDRESS, JOB, PIN, BALANCE FROM USER_ACC WHERE (USERNAME = @USERNAME)"
+                "CE], [RATA], [LAST]) VALUES (@USERNAME, @NAME, @ADDRESS, @JOB, @PIN, @BALANCE, @"& _ 
+                "RATA, @LAST);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE, RATA, LAST FRO"& _ 
+                "M USER_ACC WHERE (USERNAME = @USERNAME)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@USERNAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1382,14 +1471,18 @@ Namespace UserTableTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@JOB", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "JOB", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PIN", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BALANCE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BALANCE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RATA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RATA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LAST", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LAST", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[USER_ACC] SET [USERNAME] = @USERNAME, [NAME] = @NAME, [ADDRESS] = @"& _ 
-                "ADDRESS, [JOB] = @JOB, [PIN] = @PIN, [BALANCE] = @BALANCE WHERE (([USERNAME] = @"& _ 
-                "Original_USERNAME) AND ([NAME] = @Original_NAME) AND ([ADDRESS] = @Original_ADDR"& _ 
-                "ESS) AND ([JOB] = @Original_JOB) AND ([PIN] = @Original_PIN) AND ([BALANCE] = @O"& _ 
-                "riginal_BALANCE));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE FROM USER_"& _ 
-                "ACC WHERE (USERNAME = @USERNAME)"
+                "ADDRESS, [JOB] = @JOB, [PIN] = @PIN, [BALANCE] = @BALANCE, [RATA] = @RATA, [LAST"& _ 
+                "] = @LAST WHERE (([USERNAME] = @Original_USERNAME) AND ([NAME] = @Original_NAME)"& _ 
+                " AND ([ADDRESS] = @Original_ADDRESS) AND ([JOB] = @Original_JOB) AND ([PIN] = @O"& _ 
+                "riginal_PIN) AND ([BALANCE] = @Original_BALANCE) AND ((@IsNull_RATA = 1 AND [RAT"& _ 
+                "A] IS NULL) OR ([RATA] = @Original_RATA)) AND ((@IsNull_LAST = 1 AND [LAST] IS N"& _ 
+                "ULL) OR ([LAST] = @Original_LAST)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT USERNAME, NAME, ADDRESS, JOB, PIN, "& _ 
+                "BALANCE, RATA, LAST FROM USER_ACC WHERE (USERNAME = @USERNAME)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@USERNAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1397,12 +1490,18 @@ Namespace UserTableTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@JOB", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "JOB", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PIN", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BALANCE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BALANCE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RATA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RATA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LAST", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LAST", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_USERNAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_NAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NAME", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ADDRESS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ADDRESS", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_JOB", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "JOB", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PIN", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BALANCE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BALANCE", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_RATA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RATA", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RATA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RATA", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_LAST", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LAST", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_LAST", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LAST", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1418,7 +1517,7 @@ Namespace UserTableTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE FROM dbo.USER_ACC"
+            Me._commandCollection(0).CommandText = "SELECT * FROM dbo.USER_ACC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -1428,8 +1527,7 @@ Namespace UserTableTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@USERNAME", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE FROM dbo.USER_ACC where usernam"& _ 
-                "e = @username"
+            Me._commandCollection(2).CommandText = "SELECT * FROM USER_ACC WHERE (USERNAME = @username)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
@@ -1440,8 +1538,8 @@ Namespace UserTableTableAdapters
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "INSERT INTO [dbo].[USER_ACC] ([USERNAME], [NAME], [ADDRESS], [JOB], [PIN], [BALAN"& _ 
-                "CE]) VALUES (@USERNAME, @NAME, @ADDRESS, @JOB, @PIN, @BALANCE);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT USERNAME"& _ 
-                ", NAME, ADDRESS, JOB, PIN, BALANCE FROM USER_ACC WHERE (USERNAME = @USERNAME)"
+                "CE], [RATA], [LAST]) VALUES (@USERNAME, @NAME, @ADDRESS, @JOB, @PIN, @BALANCE, @"& _ 
+                "RATA, @LAST);"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@USERNAME", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NAME", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "NAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1449,6 +1547,8 @@ Namespace UserTableTableAdapters
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@JOB", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "JOB", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PIN", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BALANCE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BALANCE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RATA", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "RATA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LAST", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "LAST", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(5).Connection = Me.Connection
             Me._commandCollection(5).CommandText = "UPDATE [dbo].[USER_ACC] SET BALANCE = BALANCE - @BAL WHERE USERNAME = @USERNAME"
@@ -1547,7 +1647,7 @@ Namespace UserTableTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_USERNAME As String, ByVal Original_NAME As String, ByVal Original_ADDRESS As String, ByVal Original_JOB As String, ByVal Original_PIN As String, ByVal Original_BALANCE As Integer) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_USERNAME As String, ByVal Original_NAME As String, ByVal Original_ADDRESS As String, ByVal Original_JOB As String, ByVal Original_PIN As String, ByVal Original_BALANCE As Integer, ByVal Original_RATA As Global.System.Nullable(Of Integer), ByVal Original_LAST As Global.System.Nullable(Of Date)) As Integer
             If (Original_USERNAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_USERNAME")
             Else
@@ -1574,6 +1674,20 @@ Namespace UserTableTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_PIN,String)
             End If
             Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_BALANCE,Integer)
+            If (Original_RATA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_RATA.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Original_LAST.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_LAST.Value,Date)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1593,7 +1707,7 @@ Namespace UserTableTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal USERNAME As String, ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer) As Integer
+        Public Overloads Overridable Function Insert(ByVal USERNAME As String, ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer, ByVal RATA As Global.System.Nullable(Of Integer), ByVal LAST As Global.System.Nullable(Of Date)) As Integer
             If (USERNAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("USERNAME")
             Else
@@ -1620,6 +1734,16 @@ Namespace UserTableTableAdapters
                 Me.Adapter.InsertCommand.Parameters(4).Value = CType(PIN,String)
             End If
             Me.Adapter.InsertCommand.Parameters(5).Value = CType(BALANCE,Integer)
+            If (RATA.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(RATA.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (LAST.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(LAST.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1639,7 +1763,23 @@ Namespace UserTableTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal USERNAME As String, ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer, ByVal Original_USERNAME As String, ByVal Original_NAME As String, ByVal Original_ADDRESS As String, ByVal Original_JOB As String, ByVal Original_PIN As String, ByVal Original_BALANCE As Integer) As Integer
+        Public Overloads Overridable Function Update( _
+                    ByVal USERNAME As String,  _
+                    ByVal NAME As String,  _
+                    ByVal ADDRESS As String,  _
+                    ByVal JOB As String,  _
+                    ByVal PIN As String,  _
+                    ByVal BALANCE As Integer,  _
+                    ByVal RATA As Global.System.Nullable(Of Integer),  _
+                    ByVal LAST As Global.System.Nullable(Of Date),  _
+                    ByVal Original_USERNAME As String,  _
+                    ByVal Original_NAME As String,  _
+                    ByVal Original_ADDRESS As String,  _
+                    ByVal Original_JOB As String,  _
+                    ByVal Original_PIN As String,  _
+                    ByVal Original_BALANCE As Integer,  _
+                    ByVal Original_RATA As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_LAST As Global.System.Nullable(Of Date)) As Integer
             If (USERNAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("USERNAME")
             Else
@@ -1666,32 +1806,56 @@ Namespace UserTableTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(4).Value = CType(PIN,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(BALANCE,Integer)
+            If (RATA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(RATA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (LAST.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(LAST.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
             If (Original_USERNAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_USERNAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_USERNAME,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_USERNAME,String)
             End If
             If (Original_NAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_NAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_NAME,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_NAME,String)
             End If
             If (Original_ADDRESS Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_ADDRESS")
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_ADDRESS,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_ADDRESS,String)
             End If
             If (Original_JOB Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_JOB")
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_JOB,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_JOB,String)
             End If
             If (Original_PIN Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_PIN")
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_PIN,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_PIN,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_BALANCE,Integer)
+            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_BALANCE,Integer)
+            If (Original_RATA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_RATA.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (Original_LAST.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_LAST.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1711,8 +1875,8 @@ Namespace UserTableTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer, ByVal Original_USERNAME As String, ByVal Original_NAME As String, ByVal Original_ADDRESS As String, ByVal Original_JOB As String, ByVal Original_PIN As String, ByVal Original_BALANCE As Integer) As Integer
-            Return Me.Update(Original_USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE, Original_USERNAME, Original_NAME, Original_ADDRESS, Original_JOB, Original_PIN, Original_BALANCE)
+        Public Overloads Overridable Function Update(ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer, ByVal RATA As Global.System.Nullable(Of Integer), ByVal LAST As Global.System.Nullable(Of Date), ByVal Original_USERNAME As String, ByVal Original_NAME As String, ByVal Original_ADDRESS As String, ByVal Original_JOB As String, ByVal Original_PIN As String, ByVal Original_BALANCE As Integer, ByVal Original_RATA As Global.System.Nullable(Of Integer), ByVal Original_LAST As Global.System.Nullable(Of Date)) As Integer
+            Return Me.Update(Original_USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE, RATA, LAST, Original_USERNAME, Original_NAME, Original_ADDRESS, Original_JOB, Original_PIN, Original_BALANCE, Original_RATA, Original_LAST)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1778,7 +1942,7 @@ Namespace UserTableTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertUser(ByVal USERNAME As String, ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer) As Integer
+        Public Overloads Overridable Function InsertUser(ByVal USERNAME As String, ByVal NAME As String, ByVal ADDRESS As String, ByVal JOB As String, ByVal PIN As String, ByVal BALANCE As Integer, ByVal RATA As Global.System.Nullable(Of Integer), ByVal LAST As Global.System.Nullable(Of Date)) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
             If (USERNAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("USERNAME")
@@ -1806,6 +1970,16 @@ Namespace UserTableTableAdapters
                 command.Parameters(4).Value = CType(PIN,String)
             End If
             command.Parameters(5).Value = CType(BALANCE,Integer)
+            If (RATA.HasValue = true) Then
+                command.Parameters(6).Value = CType(RATA.Value,Integer)
+            Else
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (LAST.HasValue = true) Then
+                command.Parameters(7).Value = CType(LAST.Value,Date)
+            Else
+                command.Parameters(7).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
