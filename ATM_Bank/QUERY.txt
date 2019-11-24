@@ -6,8 +6,6 @@
     JOB      VARCHAR(20) NOT NULL,
     PIN      CHAR(6)     NOT NULL,
     BALANCE  INT         NOT NULL,
-    RATA     int         null,
-    LAST     DATETIME    null,
     PRIMARY KEY (USERNAME)
 );
 

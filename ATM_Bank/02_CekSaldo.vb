@@ -5,7 +5,6 @@
         ' This call is required by the designer.
         InitializeComponent()
         Saldo.Text = user.Item("BALANCE")
-        AVG_Bal.Text = user.Item("RATA")
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
