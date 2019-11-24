@@ -20,11 +20,6 @@ Public Class Nabung
             Dim y As New TRANSACTION_HISTTableAdapter
             y.InsertHistory(user.Item("USERNAME"), Val(Setor.Text), 0)
             Dim x As New USER_ACCTableAdapter
-            'Dim last As Date
-            'last = user.Item("LAST")
-            'Dim ratalama = Val(user.Item("RATA")) * Val(last.Date)
-            'Dim balancebaru = Val(Setor.Text) + Val(user.Item("BALANCE"))
-            'Dim rata = (Val(Date.Now.Date) - Val(last.Date)) * balancebaru + ratalama
             x.AddBalance(Val(Setor.Text), user.Item("USERNAME"))
             MsgBox("Balance has been added", MsgBoxStyle.Information, "Success!")
         End If

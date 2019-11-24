@@ -30,14 +30,9 @@ Partial Class CekSaldo
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Saldo = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.AVG_Bal = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout
         Me.GroupBox2.SuspendLayout
         Me.GroupBox3.SuspendLayout
-        Me.GroupBox4.SuspendLayout
         Me.SuspendLayout
         '
         'GroupBox1
@@ -63,12 +58,10 @@ Partial Class CekSaldo
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.GroupBox2.Controls.Add(Me.GroupBox4)
-        Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 123)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(323, 270)
+        Me.GroupBox2.Size = New System.Drawing.Size(323, 153)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = false
         '
@@ -115,59 +108,19 @@ Partial Class CekSaldo
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Button1.Location = New System.Drawing.Point(260, 399)
+        Me.Button1.Location = New System.Drawing.Point(260, 282)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Ok"
         Me.Button1.UseVisualStyleBackColor = true
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = true
-        Me.Label4.Font = New System.Drawing.Font("MS Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Label4.Location = New System.Drawing.Point(36, 151)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(250, 42)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Your average balance"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"for this month"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.GroupBox4.Controls.Add(Me.Label5)
-        Me.GroupBox4.Controls.Add(Me.AVG_Bal)
-        Me.GroupBox4.Location = New System.Drawing.Point(17, 196)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(286, 51)
-        Me.GroupBox4.TabIndex = 4
-        Me.GroupBox4.TabStop = false
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = true
-        Me.Label5.Font = New System.Drawing.Font("MS Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.Label5.Location = New System.Drawing.Point(19, 16)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 21)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Rp."
-        '
-        'AVG_Bal
-        '
-        Me.AVG_Bal.Location = New System.Drawing.Point(71, 17)
-        Me.AVG_Bal.Name = "AVG_Bal"
-        Me.AVG_Bal.ReadOnly = true
-        Me.AVG_Bal.Size = New System.Drawing.Size(194, 20)
-        Me.AVG_Bal.TabIndex = 1
-        '
         'CekSaldo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
-        Me.ClientSize = New System.Drawing.Size(350, 430)
+        Me.ClientSize = New System.Drawing.Size(350, 319)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -176,11 +129,8 @@ Partial Class CekSaldo
         Me.GroupBox1.ResumeLayout(false)
         Me.GroupBox1.PerformLayout
         Me.GroupBox2.ResumeLayout(false)
-        Me.GroupBox2.PerformLayout
         Me.GroupBox3.ResumeLayout(false)
         Me.GroupBox3.PerformLayout
-        Me.GroupBox4.ResumeLayout(false)
-        Me.GroupBox4.PerformLayout
         Me.ResumeLayout(false)
 
 End Sub
@@ -193,8 +143,4 @@ End Sub
     Friend WithEvents Label2 As Label
     Friend WithEvents Saldo As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents AVG_Bal As TextBox
-    Friend WithEvents Label4 As Label
 End Class
