@@ -54,7 +54,7 @@ Partial Class NominalUang
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(127, 42)
         Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Rp.100000"
+        Me.Button1.Text = "Rp 100.000"
         Me.Button1.UseVisualStyleBackColor = true
         '
         'Button2
@@ -64,7 +64,7 @@ Partial Class NominalUang
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(127, 42)
         Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Rp.50000"
+        Me.Button2.Text = "Rp 50.000"
         Me.Button2.UseVisualStyleBackColor = true
         '
         'GroupBox3

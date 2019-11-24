@@ -28,7 +28,7 @@ Partial Class CekSaldo
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Saldo = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout
         Me.GroupBox2.SuspendLayout
@@ -70,7 +70,7 @@ Partial Class CekSaldo
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.Saldo)
         Me.GroupBox3.Location = New System.Drawing.Point(17, 19)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(286, 112)
@@ -97,13 +97,13 @@ Partial Class CekSaldo
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Your saldo right now"
         '
-        'TextBox1
+        'Saldo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(71, 70)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = true
-        Me.TextBox1.Size = New System.Drawing.Size(194, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.Saldo.Location = New System.Drawing.Point(71, 70)
+        Me.Saldo.Name = "Saldo"
+        Me.Saldo.ReadOnly = true
+        Me.Saldo.Size = New System.Drawing.Size(194, 20)
+        Me.Saldo.TabIndex = 1
         '
         'Button1
         '
@@ -141,6 +141,6 @@ End Sub
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Saldo As TextBox
     Friend WithEvents Button1 As Button
 End Class

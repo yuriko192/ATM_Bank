@@ -1,8 +1,12 @@
-﻿Public Class confirm
-    Dim source As Form
+﻿Imports ATM_Bank.UserTableTableAdapters
 
-    Public Sub New(x)
+Public Class confirm
+    Dim source As Form
+    Dim target As Form
+
+    Public Sub New(x, y)
         source = x
+        target = y
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -25,9 +29,11 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim pin = PinBox.Text
         If (pin = user.Item("PIN")) Then
-            Dim x As New MainMenu
-            x.Show()
+            confirmed = True
+            target.Show()
             source.Close()
+            Dim x = New USER_ACCTableAdapter
+            user = x.GetUser(user.Item("USERNAME")).Rows.Item(0)
             Me.Close()
         Else
             PinBox.Text = ""

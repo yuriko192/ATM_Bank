@@ -24,7 +24,7 @@ Partial Class TarikUang
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Tarik = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -40,7 +40,7 @@ Partial Class TarikUang
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.Tarik)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Location = New System.Drawing.Point(13, 118)
         Me.GroupBox2.Name = "GroupBox2"
@@ -58,12 +58,12 @@ Partial Class TarikUang
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Rp."
         '
-        'TextBox1
+        'Tarik
         '
-        Me.TextBox1.Location = New System.Drawing.Point(94, 96)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.Tarik.Location = New System.Drawing.Point(94, 96)
+        Me.Tarik.Name = "Tarik"
+        Me.Tarik.Size = New System.Drawing.Size(186, 20)
+        Me.Tarik.TabIndex = 9
         '
         'GroupBox3
         '
@@ -151,7 +151,7 @@ End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Tarik As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button

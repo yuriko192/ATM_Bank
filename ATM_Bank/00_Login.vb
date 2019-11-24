@@ -25,7 +25,7 @@ Public Class Login
             MsgBox("Username doesn't exist", MsgBoxStyle.Critical, "Invalid Username")
         Else
             user = x.GetUser(username).Rows.Item(0)
-            Dim cont As New Confirm(Me)
+            Dim cont As New confirm(Me, New MainMenu)
             cont.Show()
             Me.Hide()
         End If

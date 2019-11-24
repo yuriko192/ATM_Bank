@@ -28,7 +28,7 @@ Partial Class Nabung
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Setor = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout
@@ -61,7 +61,7 @@ Partial Class Nabung
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.Setor)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(6, 118)
         Me.GroupBox2.Name = "GroupBox2"
@@ -99,12 +99,12 @@ Partial Class Nabung
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Silahkan masukkan jumlah uang"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      yang ingin disetor"
         '
-        'TextBox1
+        'Setor
         '
-        Me.TextBox1.Location = New System.Drawing.Point(112, 103)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox1.TabIndex = 11
+        Me.Setor.Location = New System.Drawing.Point(112, 103)
+        Me.Setor.Name = "Setor"
+        Me.Setor.Size = New System.Drawing.Size(186, 20)
+        Me.Setor.TabIndex = 11
         '
         'Button2
         '
@@ -154,7 +154,7 @@ End Sub
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Setor As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
 End Class
