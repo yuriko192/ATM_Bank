@@ -18,7 +18,7 @@ Public Class HistoList
         ' This call is required by the designer.
         InitializeComponent()
         Dim x As New TRANSACTION_HISTTableAdapter
-        Dim y = x.GetData().GetEnumerator()
+        Dim y = x.GetDataByUsername(user.Item("USERNAME")).GetEnumerator()
         While y.MoveNext() = True
             History_list.Controls.Add(Form_Button(New Button(), y.Current))
         End While

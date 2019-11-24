@@ -40,6 +40,8 @@ Public Class DaftarB
                         MsgBox("Balance needs to be over 500.000", MsgBoxStyle.Critical, "Invalid Balance")
                     Else
                         x.InsertUser(Username, source.Name, source.Address, source.Job, Pin, Balance)
+                        Dim y As New TRANSACTION_HISTTableAdapter
+                        y.InsertHistory(Username, Balance, 0)
                         MsgBox("User created", MsgBoxStyle.Information, "User Created")
                         source.Close()
                         Me.Close()
