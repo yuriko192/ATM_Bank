@@ -19,6 +19,8 @@ Public Class Nabung
         If (confirmed) Then
             Dim x As New USER_ACCTableAdapter
             x.AddBalance(Val(Setor.Text), user.Item("USERNAME"))
+            Dim y As New TRANSACTION_HISTTableAdapter
+            y.InsertHistory(user.Item("USERNAME"), Val(Setor.Text), 0)
             MsgBox("Balance has been added", MsgBoxStyle.Information, "Success!")
         End If
         Try

@@ -18,6 +18,8 @@ Public Class TarikUang
         If (confirmed) Then
             Dim x As New USER_ACCTableAdapter
             x.TakeBalance(Val(Tarik.Text), user.Item("USERNAME"))
+            Dim y As New TRANSACTION_HISTTableAdapter
+            y.InsertHistory(user.Item("USERNAME"), Val(Tarik.Text), 1)
             MsgBox("Balance has been taken", MsgBoxStyle.Information, "Success!")
             source.Close()
         End If
