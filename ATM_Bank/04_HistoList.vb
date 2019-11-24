@@ -1,4 +1,5 @@
-﻿Imports ATM_Bank.UserTableTableAdapters
+﻿Imports System.Security.Cryptography.X509Certificates
+Imports ATM_Bank.UserTableTableAdapters
 
 Public Class HistoList
 
@@ -7,6 +8,8 @@ Public Class HistoList
         x.Size = New System.Drawing.Size(425, 23)
         x.Text = cont._DATE
         x.UseVisualStyleBackColor = True
+        x.Tag = cont.ID
+        AddHandler x.Click, AddressOf Me.OpenInfo
         Return x
     End Function
 
@@ -29,6 +32,11 @@ Public Class HistoList
 
     Private Sub HistoList_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         F_MainM.Show()
+    End Sub
+
+    Private Sub OpenInfo(sender As Object, e As EventArgs)
+        Dim x As New history(sender.Tag)
+        x.Show()
     End Sub
 
 End Class

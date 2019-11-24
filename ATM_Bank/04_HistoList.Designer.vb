@@ -56,6 +56,7 @@ Partial Class HistoList
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 2
+        Me.Button4.Tag = "123"
         Me.Button4.Text = "Back"
         Me.Button4.UseVisualStyleBackColor = true
         '
