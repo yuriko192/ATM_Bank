@@ -77,22 +77,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CekSaldo.Designer.vb">
-      <DependentUpon>CekSaldo.vb</DependentUpon>
+    <Compile Include="02_CekSaldo.Designer.vb">
+      <DependentUpon>02_CekSaldo.vb</DependentUpon>
     </Compile>
-    <Compile Include="CekSaldo.vb">
+    <Compile Include="02_CekSaldo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="confirm.Designer.vb">
-      <DependentUpon>confirm.vb</DependentUpon>
+    <Compile Include="00_Confirm.Designer.vb">
+      <DependentUpon>00_Confirm.vb</DependentUpon>
     </Compile>
-    <Compile Include="confirm.vb">
+    <Compile Include="00_Confirm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DaftarA.Designer.vb">
-      <DependentUpon>DaftarA.vb</DependentUpon>
+    <Compile Include="00_DaftarA.Designer.vb">
+      <DependentUpon>00_DaftarA.vb</DependentUpon>
     </Compile>
-    <Compile Include="DaftarA.vb">
+    <Compile Include="00_DaftarA.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="00_Login.vb">
@@ -102,23 +102,23 @@
       <DependentUpon>00_Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DaftarB.Designer.vb">
-      <DependentUpon>DaftarB.vb</DependentUpon>
+    <Compile Include="00_DaftarB.Designer.vb">
+      <DependentUpon>00_DaftarB.vb</DependentUpon>
     </Compile>
-    <Compile Include="DaftarB.vb">
+    <Compile Include="00_DaftarB.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GlobalVar.vb" />
-    <Compile Include="HistoList.Designer.vb">
-      <DependentUpon>HistoList.vb</DependentUpon>
+    <Compile Include="04_HistoList.Designer.vb">
+      <DependentUpon>04_HistoList.vb</DependentUpon>
     </Compile>
-    <Compile Include="HistoList.vb">
+    <Compile Include="04_HistoList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.vb">
-      <DependentUpon>MainMenu.vb</DependentUpon>
+    <Compile Include="01_MainMenu.Designer.vb">
+      <DependentUpon>01_MainMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.vb">
+    <Compile Include="01_MainMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -136,28 +136,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Nabung.Designer.vb">
-      <DependentUpon>Nabung.vb</DependentUpon>
+    <Compile Include="03_Nabung.Designer.vb">
+      <DependentUpon>03_Nabung.vb</DependentUpon>
     </Compile>
-    <Compile Include="Nabung.vb">
+    <Compile Include="03_Nabung.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NominalUang.Designer.vb">
-      <DependentUpon>NominalUang.vb</DependentUpon>
+    <Compile Include="05_NominalUang.Designer.vb">
+      <DependentUpon>05_NominalUang.vb</DependentUpon>
     </Compile>
-    <Compile Include="NominalUang.vb">
+    <Compile Include="05_NominalUang.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TarikUang.Designer.vb">
-      <DependentUpon>TarikUang.vb</DependentUpon>
+    <Compile Include="05_TarikUang.Designer.vb">
+      <DependentUpon>05_TarikUang.vb</DependentUpon>
     </Compile>
-    <Compile Include="TarikUang.vb">
+    <Compile Include="05_TarikUang.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistoryTransaksi.Designer.vb">
-      <DependentUpon>HistoryTransaksi.vb</DependentUpon>
+    <Compile Include="04_HistoryTransaksi.Designer.vb">
+      <DependentUpon>04_HistoryTransaksi.vb</DependentUpon>
     </Compile>
-    <Compile Include="HistoryTransaksi.vb">
+    <Compile Include="04_HistoryTransaksi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserTable.Designer.vb">
@@ -170,26 +170,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CekSaldo.resx">
-      <DependentUpon>CekSaldo.vb</DependentUpon>
+    <EmbeddedResource Include="02_CekSaldo.resx">
+      <DependentUpon>02_CekSaldo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="confirm.resx">
-      <DependentUpon>confirm.vb</DependentUpon>
+    <EmbeddedResource Include="00_Confirm.resx">
+      <DependentUpon>00_Confirm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DaftarB.resx">
-      <DependentUpon>DaftarB.vb</DependentUpon>
+    <EmbeddedResource Include="00_DaftarB.resx">
+      <DependentUpon>00_DaftarB.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DaftarA.resx">
-      <DependentUpon>DaftarA.vb</DependentUpon>
+    <EmbeddedResource Include="00_DaftarA.resx">
+      <DependentUpon>00_DaftarA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="00_Login.resx">
       <DependentUpon>00_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistoList.resx">
-      <DependentUpon>HistoList.vb</DependentUpon>
+    <EmbeddedResource Include="04_HistoList.resx">
+      <DependentUpon>04_HistoList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
-      <DependentUpon>MainMenu.vb</DependentUpon>
+    <EmbeddedResource Include="01_MainMenu.resx">
+      <DependentUpon>01_MainMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -197,17 +197,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nabung.resx">
-      <DependentUpon>Nabung.vb</DependentUpon>
+    <EmbeddedResource Include="03_Nabung.resx">
+      <DependentUpon>03_Nabung.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NominalUang.resx">
-      <DependentUpon>NominalUang.vb</DependentUpon>
+    <EmbeddedResource Include="05_NominalUang.resx">
+      <DependentUpon>05_NominalUang.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TarikUang.resx">
-      <DependentUpon>TarikUang.vb</DependentUpon>
+    <EmbeddedResource Include="05_TarikUang.resx">
+      <DependentUpon>05_TarikUang.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistoryTransaksi.resx">
-      <DependentUpon>HistoryTransaksi.vb</DependentUpon>
+    <EmbeddedResource Include="04_HistoryTransaksi.resx">
+      <DependentUpon>04_HistoryTransaksi.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
