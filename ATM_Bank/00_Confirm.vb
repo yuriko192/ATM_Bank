@@ -30,8 +30,8 @@ Public Class confirm
         Dim pin = PinBox.Text
         If (pin = user.Item("PIN")) Then
             confirmed = True
-            target.Show()
             source.Close()
+            target.Show()
             Dim x = New USER_ACCTableAdapter
             user = x.GetUser(user.Item("USERNAME")).Rows.Item(0)
             Me.Close()

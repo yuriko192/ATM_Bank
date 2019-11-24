@@ -31,10 +31,10 @@ Public Class Nabung
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim tabung = Setor.Text
         If Not (IsNumeric(tabung)) Then
-            MsgBox("Stored amount needs to be a number", MsgBoxStyle.Critical, "Invalid Balance")
+            MsgBox("Stored amount needs to be a number", MsgBoxStyle.Critical, "Invalid Amount")
         Else
             If Not (Val(tabung) Mod 50000 = 0) Then
-                MsgBox("Stored amount needs to be a multiple of Rp. 50.000", MsgBoxStyle.Critical, "Invalid Balance")
+                MsgBox("Stored amount needs to be a multiple of Rp. 50.000", MsgBoxStyle.Critical, "Invalid Amount")
             Else
                 Dim x As New confirm(Me, F_MainM)
                 x.Show()

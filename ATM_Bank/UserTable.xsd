@@ -74,7 +74,7 @@ SELECT USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE FROM USER_ACC WHERE (USERNAME 
               <Mapping SourceColumn="BALANCE" DataSetColumn="BALANCE" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="TugasBankUasConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AddBalance" Modifier="Public" Name="AddBalance" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="AddBalance">
+              <DbSource ConnectionRef="TugasBankUasConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AddBalance" Modifier="Public" Name="AddBalance" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AddBalance">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[USER_ACC] SET BALANCE = BALANCE + @BAL WHERE USERNAME = @USERNAME</CommandText>
@@ -95,7 +95,7 @@ SELECT USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE FROM USER_ACC WHERE (USERNAME 
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="TugasBankUasConnectionString (MySettings)" DbObjectName="TugasBankUas.dbo.USER_ACC" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="FindUserPin" Modifier="Public" Name="FindUserPin" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FindUserPin">
+              <DbSource ConnectionRef="TugasBankUasConnectionString (MySettings)" DbObjectName="TugasBankUas.dbo.USER_ACC" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="FindUserPin" Modifier="Public" Name="FindUserPin" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FindUserPin">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT PIN FROM USER_ACC where username = @username</CommandText>
@@ -105,7 +105,7 @@ SELECT USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE FROM USER_ACC WHERE (USERNAME 
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="TugasBankUasConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertUser" Modifier="Public" Name="InsertUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertUser">
+              <DbSource ConnectionRef="TugasBankUasConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertUser" Modifier="Public" Name="InsertUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertUser">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[USER_ACC] ([USERNAME], [NAME], [ADDRESS], [JOB], [PIN], [BALANCE]) VALUES (@USERNAME, @NAME, @ADDRESS, @JOB, @PIN, @BALANCE);
@@ -120,6 +120,17 @@ SELECT USERNAME, NAME, ADDRESS, JOB, PIN, BALANCE FROM USER_ACC WHERE (USERNAME 
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="TugasBankUasConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TakeBalance" Modifier="Public" Name="TakeBalance" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="TakeBalance">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[USER_ACC] SET BALANCE = BALANCE - @BAL WHERE USERNAME = @USERNAME</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="BAL" ColumnName="BALANCE" DataSourceName="TugasBankUas.dbo.USER_ACC" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@BAL" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="BALANCE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="USERNAME" ColumnName="USERNAME" DataSourceName="TugasBankUas.dbo.USER_ACC" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@USERNAME" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="USERNAME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -194,7 +205,7 @@ SELECT ID, USERNAME, AMOUNT, DATE, IS_TAKING FROM TRANSACTION_HIST WHERE (ID = @
   <xs:element name="UserTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="UserTable" msprop:Generator_UserDSName="UserTable">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="USER_ACC" msprop:Generator_TableClassName="USER_ACCDataTable" msprop:Generator_TableVarName="tableUSER_ACC" msprop:Generator_TablePropName="USER_ACC" msprop:Generator_RowDeletingName="USER_ACCRowDeleting" msprop:Generator_RowChangingName="USER_ACCRowChanging" msprop:Generator_RowEvHandlerName="USER_ACCRowChangeEventHandler" msprop:Generator_RowDeletedName="USER_ACCRowDeleted" msprop:Generator_UserTableName="USER_ACC" msprop:Generator_RowChangedName="USER_ACCRowChanged" msprop:Generator_RowEvArgName="USER_ACCRowChangeEvent" msprop:Generator_RowClassName="USER_ACCRow">
+        <xs:element name="USER_ACC" msprop:Generator_TableClassName="USER_ACCDataTable" msprop:Generator_TableVarName="tableUSER_ACC" msprop:Generator_RowChangedName="USER_ACCRowChanged" msprop:Generator_TablePropName="USER_ACC" msprop:Generator_RowDeletingName="USER_ACCRowDeleting" msprop:Generator_RowChangingName="USER_ACCRowChanging" msprop:Generator_RowEvHandlerName="USER_ACCRowChangeEventHandler" msprop:Generator_RowDeletedName="USER_ACCRowDeleted" msprop:Generator_RowClassName="USER_ACCRow" msprop:Generator_UserTableName="USER_ACC" msprop:Generator_RowEvArgName="USER_ACCRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="USERNAME" msprop:Generator_ColumnVarNameInTable="columnUSERNAME" msprop:Generator_ColumnPropNameInRow="USERNAME" msprop:Generator_ColumnPropNameInTable="USERNAMEColumn" msprop:Generator_UserColumnName="USERNAME">
@@ -236,7 +247,7 @@ SELECT ID, USERNAME, AMOUNT, DATE, IS_TAKING FROM TRANSACTION_HIST WHERE (ID = @
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TRANSACTION_HIST" msprop:Generator_TableClassName="TRANSACTION_HISTDataTable" msprop:Generator_TableVarName="tableTRANSACTION_HIST" msprop:Generator_RowChangedName="TRANSACTION_HISTRowChanged" msprop:Generator_TablePropName="TRANSACTION_HIST" msprop:Generator_RowDeletingName="TRANSACTION_HISTRowDeleting" msprop:Generator_RowChangingName="TRANSACTION_HISTRowChanging" msprop:Generator_RowEvHandlerName="TRANSACTION_HISTRowChangeEventHandler" msprop:Generator_RowDeletedName="TRANSACTION_HISTRowDeleted" msprop:Generator_RowClassName="TRANSACTION_HISTRow" msprop:Generator_UserTableName="TRANSACTION_HIST" msprop:Generator_RowEvArgName="TRANSACTION_HISTRowChangeEvent">
+        <xs:element name="TRANSACTION_HIST" msprop:Generator_TableClassName="TRANSACTION_HISTDataTable" msprop:Generator_TableVarName="tableTRANSACTION_HIST" msprop:Generator_TablePropName="TRANSACTION_HIST" msprop:Generator_RowDeletingName="TRANSACTION_HISTRowDeleting" msprop:Generator_RowChangingName="TRANSACTION_HISTRowChanging" msprop:Generator_RowEvHandlerName="TRANSACTION_HISTRowChangeEventHandler" msprop:Generator_RowDeletedName="TRANSACTION_HISTRowDeleted" msprop:Generator_UserTableName="TRANSACTION_HIST" msprop:Generator_RowChangedName="TRANSACTION_HISTRowChanged" msprop:Generator_RowEvArgName="TRANSACTION_HISTRowChangeEvent" msprop:Generator_RowClassName="TRANSACTION_HISTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -266,7 +277,7 @@ SELECT ID, USERNAME, AMOUNT, DATE, IS_TAKING FROM TRANSACTION_HIST WHERE (ID = @
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__TRANSACTI__USERN__74AE54BC" msdata:parent="USER_ACC" msdata:child="TRANSACTION_HIST" msdata:parentkey="USERNAME" msdata:childkey="USERNAME" msprop:Generator_UserChildTable="TRANSACTION_HIST" msprop:Generator_ChildPropName="GetTRANSACTION_HISTRows" msprop:Generator_UserRelationName="FK__TRANSACTI__USERN__74AE54BC" msprop:Generator_RelationVarName="relationFK__TRANSACTI__USERN__74AE54BC" msprop:Generator_UserParentTable="USER_ACC" msprop:Generator_ParentPropName="USER_ACCRow" />
+      <msdata:Relationship name="FK__TRANSACTI__USERN__74AE54BC" msdata:parent="USER_ACC" msdata:child="TRANSACTION_HIST" msdata:parentkey="USERNAME" msdata:childkey="USERNAME" msprop:Generator_UserChildTable="TRANSACTION_HIST" msprop:Generator_ChildPropName="GetTRANSACTION_HISTRows" msprop:Generator_UserRelationName="FK__TRANSACTI__USERN__74AE54BC" msprop:Generator_ParentPropName="USER_ACCRow" msprop:Generator_RelationVarName="relationFK__TRANSACTI__USERN__74AE54BC" msprop:Generator_UserParentTable="USER_ACC" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

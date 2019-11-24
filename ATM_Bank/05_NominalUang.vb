@@ -5,7 +5,12 @@
     End Sub
 
     Private Sub NominalUang_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        F_MainM.Show()
+        Try
+            F_MainM.Show()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
