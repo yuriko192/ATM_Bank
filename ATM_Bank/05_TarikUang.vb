@@ -16,10 +16,10 @@ Public Class TarikUang
 
     Private Sub TarikUang_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         If (confirmed) Then
-            Dim x As New USER_ACCTableAdapter
-            x.TakeBalance(Val(Tarik.Text), user.Item("USERNAME"))
             Dim y As New TRANSACTION_HISTTableAdapter
             y.InsertHistory(user.Item("USERNAME"), Val(Tarik.Text), 1)
+            Dim x As New USER_ACCTableAdapter
+            x.TakeBalance(Val(Tarik.Text), user.Item("USERNAME"))
             MsgBox("Balance has been taken", MsgBoxStyle.Information, "Success!")
             source.Close()
         End If

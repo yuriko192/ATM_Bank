@@ -17,10 +17,10 @@ Public Class Nabung
 
     Private Sub Nabung_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         If (confirmed) Then
-            Dim x As New USER_ACCTableAdapter
-            x.AddBalance(Val(Setor.Text), user.Item("USERNAME"))
             Dim y As New TRANSACTION_HISTTableAdapter
             y.InsertHistory(user.Item("USERNAME"), Val(Setor.Text), 0)
+            Dim x As New USER_ACCTableAdapter
+            x.AddBalance(Val(Setor.Text), user.Item("USERNAME"))
             MsgBox("Balance has been added", MsgBoxStyle.Information, "Success!")
         End If
         Try

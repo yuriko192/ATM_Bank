@@ -24,110 +24,71 @@ Partial Class HistoList
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.SuspendLayout()
+        Me.History_list = New System.Windows.Forms.FlowLayoutPanel()
+        Me.GroupBox1.SuspendLayout
+        Me.SuspendLayout
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(128,Byte),Integer))
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(444, 108)
         Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.TabStop = false
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("MS Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.AutoSize = true
+        Me.Label1.Font = New System.Drawing.Font("MS Gothic", 24!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label1.Location = New System.Drawing.Point(18, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(406, 66)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "       == List ==" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "== History Transaksi =="
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 139)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(444, 160)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(24, 34)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(400, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Date : 20/11/19"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Button2.Location = New System.Drawing.Point(24, 74)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(400, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Date : 22/11/19"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(24, 113)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(400, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Date : 23/11/19"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Label1.Text = "       == List =="&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"== History Transaksi =="
         '
         'Button4
         '
-        Me.Button4.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(381, 314)
+        Me.Button4.Font = New System.Drawing.Font("MS Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Button4.Location = New System.Drawing.Point(381, 461)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 2
         Me.Button4.Text = "Back"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = true
+        '
+        'History_list
+        '
+        Me.History_list.AutoScroll = true
+        Me.History_list.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.History_list.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.History_list.Location = New System.Drawing.Point(12, 140)
+        Me.History_list.Name = "History_list"
+        Me.History_list.Size = New System.Drawing.Size(444, 315)
+        Me.History_list.TabIndex = 3
+        Me.History_list.WrapContents = false
         '
         'HistoList
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
-        Me.ClientSize = New System.Drawing.Size(471, 355)
+        Me.ClientSize = New System.Drawing.Size(471, 496)
+        Me.Controls.Add(Me.History_list)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "HistoList"
         Me.Text = "HistoList"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(false)
+        Me.GroupBox1.PerformLayout
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents History_list As FlowLayoutPanel
 End Class

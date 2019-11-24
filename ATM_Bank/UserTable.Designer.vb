@@ -1997,24 +1997,22 @@ Namespace UserTableTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IS_TAKING", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IS_TAKING", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [TRANSACTION_HIST] ([ID], [USERNAME], [AMOUNT], [DATE], [IS_TAKING]) "& _ 
-                "VALUES (@ID, @USERNAME, @AMOUNT, @DATE, @IS_TAKING);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, USERNAME, AMOUN"& _ 
-                "T, DATE, IS_TAKING FROM TRANSACTION_HIST WHERE (ID = @ID)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [TRANSACTION_HIST] ([USERNAME], [AMOUNT], [DATE], [IS_TAKING]) VALUES"& _ 
+                " (@USERNAME, @AMOUNT, @DATE, @IS_TAKING);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, USERNAME, AMOUNT, DATE, IS"& _ 
+                "_TAKING FROM TRANSACTION_HIST WHERE (ID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@USERNAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AMOUNT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AMOUNT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DATE", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DATE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IS_TAKING", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IS_TAKING", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [TRANSACTION_HIST] SET [ID] = @ID, [USERNAME] = @USERNAME, [AMOUNT] = @AMO"& _ 
-                "UNT, [DATE] = @DATE, [IS_TAKING] = @IS_TAKING WHERE (([ID] = @Original_ID) AND ("& _ 
-                "[USERNAME] = @Original_USERNAME) AND ([AMOUNT] = @Original_AMOUNT) AND ([DATE] ="& _ 
-                " @Original_DATE) AND ([IS_TAKING] = @Original_IS_TAKING));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, USERNAME,"& _ 
-                " AMOUNT, DATE, IS_TAKING FROM TRANSACTION_HIST WHERE (ID = @ID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [TRANSACTION_HIST] SET [USERNAME] = @USERNAME, [AMOUNT] = @AMOUNT, [DATE] "& _ 
+                "= @DATE, [IS_TAKING] = @IS_TAKING WHERE (([ID] = @Original_ID) AND ([USERNAME] ="& _ 
+                " @Original_USERNAME) AND ([AMOUNT] = @Original_AMOUNT) AND ([DATE] = @Original_D"& _ 
+                "ATE) AND ([IS_TAKING] = @Original_IS_TAKING));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, USERNAME, AMOUNT, DAT"& _ 
+                "E, IS_TAKING FROM TRANSACTION_HIST WHERE (ID = @ID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@USERNAME", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AMOUNT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AMOUNT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DATE", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DATE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2024,6 +2022,7 @@ Namespace UserTableTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AMOUNT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AMOUNT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DATE", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DATE", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IS_TAKING", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IS_TAKING", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2043,8 +2042,8 @@ Namespace UserTableTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "INSERT INTO TRANSACTION_HIST(ID,USERNAME,AMOUNT,DATE,IS_TAKING)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (max(ID),"& _ 
-                " @username,@amount, sysdatetime(), @is_taking);"
+            Me._commandCollection(1).CommandText = "INSERT INTO TRANSACTION_HIST(USERNAME,AMOUNT,DATE,IS_TAKING)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (@username,@"& _ 
+                "amount, sysdatetime(), @is_taking);"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "USERNAME", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@amount", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "AMOUNT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -2136,16 +2135,15 @@ Namespace UserTableTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal ID As Integer, ByVal USERNAME As String, ByVal AMOUNT As Integer, ByVal _DATE As Date, ByVal IS_TAKING As Boolean) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(ID,Integer)
+        Public Overloads Overridable Function Insert(ByVal USERNAME As String, ByVal AMOUNT As Integer, ByVal _DATE As Date, ByVal IS_TAKING As Boolean) As Integer
             If (USERNAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("USERNAME")
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(USERNAME,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(USERNAME,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(AMOUNT,Integer)
-            Me.Adapter.InsertCommand.Parameters(3).Value = CType(_DATE,Date)
-            Me.Adapter.InsertCommand.Parameters(4).Value = CType(IS_TAKING,Boolean)
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(AMOUNT,Integer)
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(_DATE,Date)
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(IS_TAKING,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2165,25 +2163,25 @@ Namespace UserTableTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal ID As Integer, ByVal USERNAME As String, ByVal AMOUNT As Integer, ByVal _DATE As Date, ByVal IS_TAKING As Boolean, ByVal Original_ID As Integer, ByVal Original_USERNAME As String, ByVal Original_AMOUNT As Integer, ByVal Original_DATE As Date, ByVal Original_IS_TAKING As Boolean) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(ID,Integer)
+        Public Overloads Overridable Function Update(ByVal USERNAME As String, ByVal AMOUNT As Integer, ByVal _DATE As Date, ByVal IS_TAKING As Boolean, ByVal Original_ID As Integer, ByVal Original_USERNAME As String, ByVal Original_AMOUNT As Integer, ByVal Original_DATE As Date, ByVal Original_IS_TAKING As Boolean, ByVal ID As Integer) As Integer
             If (USERNAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("USERNAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(USERNAME,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(USERNAME,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(AMOUNT,Integer)
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(_DATE,Date)
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(IS_TAKING,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_ID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(AMOUNT,Integer)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(_DATE,Date)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(IS_TAKING,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_ID,Integer)
             If (Original_USERNAME Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_USERNAME")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_USERNAME,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_USERNAME,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_AMOUNT,Integer)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_DATE,Date)
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_IS_TAKING,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_AMOUNT,Integer)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_DATE,Date)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_IS_TAKING,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(ID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2204,7 +2202,7 @@ Namespace UserTableTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal USERNAME As String, ByVal AMOUNT As Integer, ByVal _DATE As Date, ByVal IS_TAKING As Boolean, ByVal Original_ID As Integer, ByVal Original_USERNAME As String, ByVal Original_AMOUNT As Integer, ByVal Original_DATE As Date, ByVal Original_IS_TAKING As Boolean) As Integer
-            Return Me.Update(Original_ID, USERNAME, AMOUNT, _DATE, IS_TAKING, Original_ID, Original_USERNAME, Original_AMOUNT, Original_DATE, Original_IS_TAKING)
+            Return Me.Update(USERNAME, AMOUNT, _DATE, IS_TAKING, Original_ID, Original_USERNAME, Original_AMOUNT, Original_DATE, Original_IS_TAKING, Original_ID)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
